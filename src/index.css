@@ -199,21 +199,6 @@ aside  {
   padding: 4rem;
 }
 
-@media (max-width:768px) {
-  .contenedor-tareas {
-  padding: 1rem;
-}
-.tarea{
-  flex-direction: column;
-}
-.tarea p{
-  padding-right: 0;
-  margin: 1rem 0;
-}
-.estado{
-  margin: 0 0 1rem 0;
-}
-}
 
 .listado-tareas {
   max-width: 600px;
@@ -386,4 +371,20 @@ aside  {
 .alerta-error {
   background-color: rgb(230, 78, 78);
   color: var(--blanco);
+}
+
+@media (max-width:768px) {
+  .contenedor-tareas {
+  padding: 1rem;
+}
+.tarea{
+  flex-direction: column;
+}
+.tarea p{
+  padding-right: 0;
+  margin: 1rem 0;
+}
+.estado{
+  margin: 0 0 1rem 0;
+}
 }

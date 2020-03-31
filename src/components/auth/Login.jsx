@@ -77,6 +77,7 @@ const Login = (props) => {
 
                 </form>
                 <Link to={'/nueva-cuenta'} className="enlace-cuenta">¿No tienes cuenta? Registrate</Link>
+                <p>Prueba la app usando admin@admin.com | 123456</p>
             </div>
         </div>
     );
