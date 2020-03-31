@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import Task from './Task'
 import projectContext from '../../context/projects/ProjectContext'
 import TaskContext from '../../context/Tasks/TaskContext'
@@ -12,7 +12,15 @@ const TasksList = () => {
 
     //Obtener las tareas del proyecto
     const tasksContext = useContext(TaskContext)
-    const { tasksProject } = tasksContext
+    const { tasksProject, getTasks } = tasksContext
+
+    useEffect(() => {
+        if (project) {
+            getTasks(project[0]._id)
+        }
+
+        //eslint-disable-next-line
+    }, [tasksProject])
 
     //Si no hay proyecto seleccionado
     if (!project) return <h2>Selecciona un proyecto</h2>
@@ -20,11 +28,12 @@ const TasksList = () => {
     //Array destructuring
     const [actualProject] = project
 
-
-    //Eliminar proyecto 
+    //Eliminar proyecto
     const onClickDelete = () => {
         deleteProject(actualProject._id)
     }
+
+
 
     return (
         <>
