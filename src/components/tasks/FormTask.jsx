@@ -64,7 +64,6 @@ const FormTask = () => {
             //Limpia tarea seleccionada del state
             cleanTask()
         }
-        console.log('AQUI', actualProject)
         //Obtener y filtrar las tareas del proyecto actual
         getTasks(actualProject._id)
 

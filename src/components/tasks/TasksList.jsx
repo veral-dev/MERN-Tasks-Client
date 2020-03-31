@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext } from 'react'
 import Task from './Task'
 import projectContext from '../../context/projects/ProjectContext'
 import TaskContext from '../../context/Tasks/TaskContext'
@@ -12,8 +12,8 @@ const TasksList = () => {
 
     //Obtener las tareas del proyecto
     const tasksContext = useContext(TaskContext)
-    const { tasksProject, getTasks } = tasksContext
-
+    const { tasksProject } = tasksContext
+    // console.log(tasksProject)
     //Si no hay proyecto seleccionado
     if (!project) return <h2>Selecciona un proyecto</h2>
 

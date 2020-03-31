@@ -20,7 +20,7 @@ const Task = ({ task }) => {
     //Funcion de eliminar tarea
     const taskDelete = id => {
         deleteTask(id, actualProject._id)
-        getTasks(actualProject.id)
+        getTasks(actualProject._id)
     }
 
     //Funcion que modifica el estado de la tarea
