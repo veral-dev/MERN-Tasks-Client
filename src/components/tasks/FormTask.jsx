@@ -53,7 +53,6 @@ const FormTask = () => {
             taskValidation()
             return
         }
-
         //Comprobar si es edición o nueva tarea
         if (taskSelected === null) {
             //Agregar la nueva tarea al state de tareas
@@ -65,10 +64,9 @@ const FormTask = () => {
             //Limpia tarea seleccionada del state
             cleanTask()
         }
-
-
+        console.log('AQUI', actualProject)
         //Obtener y filtrar las tareas del proyecto actual
-        getTasks(actualProject.id)
+        getTasks(actualProject._id)
 
         //Reiniciar el Form
         setTask({

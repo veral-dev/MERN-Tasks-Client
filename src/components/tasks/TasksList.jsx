@@ -14,14 +14,6 @@ const TasksList = () => {
     const tasksContext = useContext(TaskContext)
     const { tasksProject, getTasks } = tasksContext
 
-    useEffect(() => {
-        if (project) {
-            getTasks(project[0]._id)
-        }
-
-        //eslint-disable-next-line
-    }, [tasksProject])
-
     //Si no hay proyecto seleccionado
     if (!project) return <h2>Selecciona un proyecto</h2>
 

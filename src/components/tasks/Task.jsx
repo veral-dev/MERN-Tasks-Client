@@ -26,11 +26,6 @@ const Task = ({ task }) => {
     //Funcion que modifica el estado de la tarea
     const changeState = task => {
         task.state = !task.state
-        // if (task.state) {
-        //     task.state = false
-        // } else {
-        //     task.state = true
-        // }
 
         updateTask(task)
     }
