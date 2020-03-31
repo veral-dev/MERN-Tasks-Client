@@ -63,7 +63,7 @@ const Login = (props) => {
                 <form onSubmit={onSubmit}>
                     <div className="campo-form">
                         <label htmlFor="email">Correo electrónico</label>
-                        <input type="email" id="email" name="email" placeholder="Correo electrónico" value={email} onChange={onChange} />
+                        <input type="email" id="email" name="email" placeholder="Email" value={email} onChange={onChange} />
                     </div>
                     <div className="campo-form">
                         <label htmlFor="password">Contraseña</label>
